@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{artistName}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card *ngFor="let album of listAlbum" (click)="searchAlbumTrack(album.id)">
+  <ion-card-title>{{album.title}}</ion-card-title>
+  <ion-card-content>
+    <ion-img [src]="album.cover_medium"></ion-img>
+  </ion-card-content>
+</ion-card>
+
+</ion-content>
